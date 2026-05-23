@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitar Presupuesto | OPUS Constructora</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Estilos específicos para la página de contacto */
+    .contact-form-container {
+      max-width: 600px;
+      margin: 4rem auto;
+      background: var(--white);
+      padding: 3rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      border: 1px solid #dce4f1;
+    }
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: var(--navy-2);
+    }
+    .form-control {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #c2ccda;
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+    .form-control:focus {
+      outline: none;
+      border-color: #d4af37;
+      box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+    }
+    textarea.form-control {
+      resize: vertical;
+      min-height: 120px;
+    }
+    .contact-header {
+      text-align: center;
+      padding: 4rem 0 2rem;
+      background: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">OPUS <span>Constructora</span></a>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html#servicios">Servicios</a></li>
+          <li><a href="index.html#proceso">Proceso</a></li>
+          <li><a href="contacto.html" class="btn-nav">Solicitar Presupuesto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-header">
+      <div class="container">
+        <h1>Inicie su Proyecto con Nosotros</h1>
+        <p class="lead" style="margin: 0 auto;">Complete el siguiente formulario para recibir asesoramiento personalizado y un presupuesto a medida para su construcción de alto standing.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="contact-form-container">
+          <form action="https://formsubmit.co/contacto@evox.com.uy" method="POST">
+            <!-- Configuración FormSubmit -->
+            <input type="hidden" name="_subject" value="Nueva solicitud de presupuesto - OPUS Constructora">
+            <input type="hidden" name="_template" value="table">
+            <!-- <input type="hidden" name="_next" value="URL_DE_GRACIAS"> --> <!-- Recomendado cambiar luego por una página real -->
+
+            <div class="form-group">
+              <label for="name">Nombre Completo</label>
+              <input type="text" id="name" name="name" class="form-control" required placeholder="Ej: Juan Pérez">
+            </div>
+
+            <div class="form-group">
+              <label for="email">Correo Electrónico</label>
+              <input type="email" id="email" name="email" class="form-control" required placeholder="ejemplo@correo.com">
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Teléfono de Contacto</label>
+              <input type="tel" id="phone" name="phone" class="form-control" required placeholder="+598 99 123 456">
+            </div>
+
+            <div class="form-group">
+              <label for="project_type">Tipo de Proyecto</label>
+              <select id="project_type" name="project_type" class="form-control" required>
+                <option value="" disabled selected>Seleccione una opción</option>
+                <option value="Casa de Alto Padrón">Casa de Alto Padrón</option>
+                <option value="Finalización de Obra">Finalización de Obra</option>
+                <option value="Construcción Comercial">Construcción Comercial</option>
+                <option value="Otro">Otro</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Mensaje / Detalles del Proyecto</label>
+              <textarea id="message" name="message" class="form-control" required placeholder="Cuéntenos sobre su proyecto, ubicación, metros cuadrados estimados, etc."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Enviar Solicitud de Presupuesto</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer text-center">
+    <div class="container">
+      <p>&copy; 2024 OPUS Constructora. Obras residenciales de alto standing.</p>
+    </div>
+  </footer>
+</body>
+</html>
