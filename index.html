@@ -158,35 +158,42 @@
     .main-hero {
       position: relative;
       overflow: hidden;
-      border-radius: 0.75rem;
-      background-image: linear-gradient(rgba(8, 19, 42, 0.35), rgba(8, 19, 42, 0.42)), url("assets/hero-background.avif");
+      border-radius: 0;
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+      background-image: linear-gradient(rgba(8, 19, 42, 0.3), rgba(8, 19, 42, 0.32)), url("assets/hero-background.avif");
       background-size: cover;
       background-position: center;
-      padding: clamp(2rem, 4vw, 4rem);
-      min-height: 560px;
+      padding: clamp(2.5rem, 5vw, 5rem) clamp(1.25rem, 4vw, 4rem);
+      min-height: 620px;
       display: flex;
       align-items: center;
     }
     .main-hero-grid {
+      max-width: 1440px;
+      margin: 0 auto;
       display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(220px, 34%);
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 460px);
       gap: clamp(1.5rem, 3vw, 3rem);
       align-items: end;
       width: 100%;
     }
     .main-hero-person {
       width: 100%;
-      max-width: 360px;
+      max-width: none;
+      height: 500px;
       justify-self: center;
       align-self: end;
       object-fit: contain;
+      width: auto;
       filter: drop-shadow(0 20px 45px rgba(0, 0, 0, 0.35));
     }
     .main-hero-content { max-width: 780px; }
     @media (max-width: 1024px) {
-      .main-hero { min-height: 0; }
+      .main-hero { min-height: 0; padding-top: 2.5rem; padding-bottom: 2.5rem; }
       .main-hero-grid { grid-template-columns: 1fr; align-items: start; }
-      .main-hero-person { max-width: 260px; }
+      .main-hero-person { height: 320px; width: auto; }
     }
 
 </style>
